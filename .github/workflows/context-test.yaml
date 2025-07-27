@@ -9,3 +9,7 @@ jobs:
         run: echo ${{ github.workflow }}
       - name: Check context (quoted)
         run: echo "${{ github.workflow }}"
+      - name: Echo Event Name
+        run: echo "${{ github.event_name }}"
+      - name: Echo Event
+        run: echo "${{ toJson(github.event) }}"
