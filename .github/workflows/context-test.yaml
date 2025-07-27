@@ -1,0 +1,10 @@
+name: "hoge#hoge"
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check context (unquoted)
+        run: echo ${{ github.workflow }}
+      - name: Check context (quoted)
+        run: echo "${{ github.workflow }}"
